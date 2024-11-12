@@ -1,30 +1,30 @@
 # README: Classification of Organic and Non-Organic Apples and Mushrooms Based on Visible and Thermal Imaging Using Traditional and Deep Methods   
 
 ## Overview  
-This project aims to classify organic apples and mushrooms from non-organic counterparts using both traditional feature extraction methods and advanced deep learning techniques. The methodologies presented in this project are based on the findings of our research article and have been implemented to facilitate reproducibility and further exploration.  
+This project aims to classify organic apples and mushrooms from non-organic counterparts using both traditional feature extraction methods and deep learning techniques. The methodologies presented in this project are based on the findings of our research article and have been implemented to facilitate reproducibility and further exploration.  
 
 ## Dataset  
 We have generated a custom dataset in a controlled environment that includes both thermal and visible images of organic and non-organic apples and mushrooms. This dataset is made freely available to encourage research and development in this field.  
 You can download it using the following link:  
 [Organic and Non-Organic Dataset](https://data.mendeley.com/datasets/pwzk7dj5wf/1)  
-The imaging environment which is designed to control environmental conditions is shown in the figure.  
+The imaging system which is designed to control environmental conditions is shown in the figure 1. 
 ![Screenshot (255)](https://github.com/user-attachments/assets/c125ec4f-a90e-4b4a-8a64-f0613fd14a9c)  
 
 <p align="center">  
-    <em> (a) NIR camera. (b) Experimental imaging setting</em>  
+    <em> Figure1: (a) NIR camera. (b) Experimental imaging setting</em>  
 </p>  
 
 ## Project Structure  
 The project is organized into two main methodologies: the Traditional Method and Deep Learning Method. Each methodology comprises specific code files explained below.  
-The general view of our work in this paper is represented in the next figure.  
+The general view of our work in this paper is represented in the figure 2.  
 ![Screenshot (253)](https://github.com/user-attachments/assets/9520e98d-21ba-4740-b880-182a95f5bed1)  
 <p align="center">  
-    <em> The general structure of the proposed method</em>  
+    <em> Figure2: The general structure of the proposed method</em>  
 </p>  
 
 ### Pre-processing  
 1. **Color Image Segmentation**:  
-   - **File**: [Color Image Segmentation](https://github.com/Zahramashayekhpour/organic-and-nonorganic-fruits-classification-based-on-traditional-machine-learning-and-deep-learning/blob/master/Color%20Image%20Segmentation%20(HSV%20color%20space).m))   
+   - **File**: [Color Image Segmentation](https://github.com/Zahramashayekhpour/organic-and-nonorganic-fruits-classification-based-on-traditional-machine-learning-and-deep-learning/blob/master/Color%20Image%20Segmentation%20(HSV%20color%20space).m)  
    - **Description**: Thresholding on color images involves setting boundaries for each channel to create masks for segmenting fruits from the background. Converting images from RGB to different color spaces, particularly HSV, yields the best results for apple and mushroom segmentation.  
 
 2. **Thermal Image Segmentation**:  
@@ -32,7 +32,7 @@ The general view of our work in this paper is represented in the next figure.
    - **Description**: Active contour segmentation iteratively refines the boundary of a target object based on initial points placed around it. A total of 250 iterations were performed, along with morphological opening and closing operations to enhance segmentation accuracy.  
 
 ### Traditional Method  
-Upon employing the image segmentation approach, different methods of extracting features exhibit varying results. Methods like GLCM, Gabor filters, HOG descriptors, and CM for visible images provide distinct sets of features. When these features are used with classifiers like MLP, LDA, RF, and SVM, their ability to distinguish between organic and non-organic fruits differs. Additionally, GA is established to enhance the results.  
+Upon employing the image segmentation approach, different methods of extracting features exhibit various results. Methods like GLCM, Gabor filters, HOG descriptors, and CM for visible images provide distinct sets of features. When these features are used with classifiers like MLP, LDA, RF, and SVM, their ability to distinguish between organic and non-organic fruits differs. Additionally, GA is established to enhance the results.  
 
 1. **Color Feature Extraction**:  
    - **File**: [Color Feature Extraction](https://github.com/Zahramashayekhpour/organic-and-nonorganic-fruits-classification-based-on-traditional-machine-learning-and-deep-learning/blob/master/Color_Image_Feature.ipynb)  
@@ -54,11 +54,10 @@ Upon employing the image segmentation approach, different methods of extracting 
 
 1. **Pre-trained CNN**:  
    - **File**: [Pre-trained CNN](https://github.com/Zahramashayekhpour/organic-and-nonorganic-fruits-classification-based-on-traditional-machine-learning-and-deep-learning/blob/master/Pre-trained%20CNNs%20.ipynb) 
-   - **Description**: This script implements and compares 13 pre-trained Convolutional Neural Networks (CNNs), including MobileNet, MobileNetV2, ResNet101VV2, ResNet101, ResNet50, ResNet50V2, ResNet152, DenseNet201, DenseNet169, DenseNet121, Xception, InceptionV3, and InceptionResNetV2. These models are evaluated to determine which performs best for classification tasks. A customized classification head is appended to prevent overfitting and improve accuracy. The CNN model, illustrated in Figure 7, consists of two main components: the first section has all layers frozen with no optimization, while the second part involves fine-tuning the last layer with a heading model. The layer arrangement may vary based on the specific problem and dataset but generally follows a logical flow: feature extraction layers, pooling layers to reduce dimensions and capture essential features, batch normalization for input normalization and speed, a dense layer with 256 neurons for learning complex relationships, a dropout layer (0.25) to prevent overfitting, and a final dense output layer with two neurons for predictions. Images are resized to 224 × 224 and 227 × 227 pixels to match the network's input dimensions.  
-The CNN model is presented in the figure below.  
+   - **Description**: This script implements and compares 13 pre-trained Convolutional Neural Networks (CNNs), including MobileNet, MobileNetV2, ResNet101VV2, ResNet101, ResNet50, ResNet50V2, ResNet152, DenseNet201, DenseNet169, DenseNet121, Xception, InceptionV3, and InceptionResNetV2. These models are evaluated to determine which performs best for classification tasks. A customized classification head is appended to prevent overfitting and improve accuracy. The CNN model, illustrated in Figure 3, consists of two main components: the first section has all layers frozen with no optimization, while the second part involves fine-tuning the last layer with a heading model. The layer arrangement may vary based on the specific problem and dataset but generally follows a logical flow: feature extraction layers, pooling layers to reduce dimensions and capture essential features, batch normalization for input normalization and speed, a dense layer with 256 neurons for learning complex relationships, a dropout layer (0.25) to prevent overfitting, and a final dense output layer with two neurons for predictions. Images are resized to 224 × 224 and 227 × 227 pixels to match the network's input dimensions.   
 ![Screenshot (254)](https://github.com/user-attachments/assets/6e829dfe-54bd-41b7-82bb-8c1996754560)  
 <p align="center">  
-    <em> The proposed DL system model</em>  
+    <em> Figure3: The proposed DL system model</em>  
 </p>  
 
 2. **CNNs as Feature Extractor**:  
