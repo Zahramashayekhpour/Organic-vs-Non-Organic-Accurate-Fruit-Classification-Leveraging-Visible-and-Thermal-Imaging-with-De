@@ -6,11 +6,12 @@ This project aims to classify organic apples and mushrooms from non-organic coun
 ## Dataset  
 We have generated a custom dataset that includes both thermal and visible images of organic and non-organic apples and mushrooms. This dataset is made freely available to encourage research and development in this field. You can download it using the following link:  
 
-[Download Dataset](https://data.mendeley.com/datasets/pwzk7dj5wf/1)  
+[Download Dataset]()  
 
 ## Project Structure  
 The project is organized into two main methodologies: Traditional Method and Deep Learning Method. Each methodology comprises specific code files explained below.  
-![image](https://github.com/user-attachments/assets/28ff1841-7ccd-408e-8b47-02a8580d6496)
+![image](![image](https://github.com/user-attachments/assets/f2d90e27-0844-4a5d-ab14-10ef7f33da86)
+)
 
 
 ### Traditional Method  
