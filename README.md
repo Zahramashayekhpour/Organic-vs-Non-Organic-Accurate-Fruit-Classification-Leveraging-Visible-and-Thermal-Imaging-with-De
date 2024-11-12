@@ -69,10 +69,8 @@ Upon employing the image segmentation approach, different methods of extracting 
 ## Results  
 The methodologies developed in this project yield the following results:  
 
-### Traditional Method:  
+ 
 - The traditional approach achieved a maximum accuracy of 94.89% for classifying apples in thermal images using LDA.  
-
-### Deep Learning Method:  
 - The best accuracy obtained for apples in visible images was 100% using LDA.  
 - The RF classifier achieved 92.35% accuracy for apples in thermal images.  
 - For mushrooms, the SVM reached 97.30% accuracy in visible images and 100% accuracy in thermal images.  
