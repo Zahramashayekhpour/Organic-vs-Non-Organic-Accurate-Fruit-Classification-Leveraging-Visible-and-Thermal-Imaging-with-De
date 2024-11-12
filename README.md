@@ -4,16 +4,29 @@
 This project aims to classify organic apples and mushrooms from non-organic counterparts using both traditional feature extraction methods and advanced deep learning techniques. The methodologies presented in this project are based on the findings of our research article and have been implemented to facilitate reproducibility and further exploration.  
 
 ## Dataset  
-We have generated a custom dataset that includes both thermal and visible images of organic and non-organic apples and mushrooms. This dataset is made freely available to encourage research and development in this field. You can download it using the following link:  
+We have generated a custom dataset in a controlled environment that includes both thermal and visible images of organic and non-organic apples and mushrooms. This dataset is made freely available to encourage research and development in this field. You can download it using the following link:  
 
 [Download Dataset](https://data.mendeley.com/datasets/pwzk7dj5wf/1)  
+![image](https://github.com/user-attachments/assets/92a490ab-a3c8-4882-a291-fdee17793603)
+
+<p align="center">
+    <em> (a) NIR camera. (b) Experimental imaging setting>
+</p>
 
 ## Project Structure  
 The project is organized into two main methodologies: Traditional Method and Deep Learning Method. Each methodology comprises specific code files explained below.  
-(![Screenshot (253)](https://github.com/user-attachments/assets/9520e98d-21ba-4740-b880-182a95f5bed1)
+![Screenshot (253)](https://github.com/user-attachments/assets/9520e98d-21ba-4740-b880-182a95f5bed1)
+<p align="center">
+    <em> The general structure of the proposed method</em>
+</p>
+### Pre-processing
+1. **Color Image Segmentation**:  
+   - **File**: `color_feature_extraction.py`  
+   - **Description**: Thresholding on color images involves setting boundaries for each channel to create masks for segmenting fruits from the background. Converting images from RGB to different color spaces, particularly HSV, yields the best results for apple and mushroom segmentation.
 
-
-
+1. **Thermal Image Segmentation**:  
+   - **File**: `color_feature_extraction.py`  
+   - **Description**: Active contour segmentation iteratively refines the boundary of a target object based on initial points placed around it. A total of 250 iterations were performed, along with morphological opening and closing operations to enhance segmentation accuracy.
 
 ### Traditional Method  
 
