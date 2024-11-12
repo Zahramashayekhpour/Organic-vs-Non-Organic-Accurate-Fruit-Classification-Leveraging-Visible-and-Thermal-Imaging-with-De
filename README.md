@@ -52,7 +52,8 @@ Upon employing the image segmentation approach, different methods of extracting 
 
 ### Deep Learning Method  
 
-1. **Pre-trained CNN**:  
+1. **Pre-trained CNN**:
+   
    - **File**: [Pre-trained CNN](https://github.com/Zahramashayekhpour/organic-and-nonorganic-fruits-classification-based-on-traditional-machine-learning-and-deep-learning/blob/master/Pre-trained%20CNNs%20.ipynb) 
    - **Description**: This script implements and compares 13 pre-trained Convolutional Neural Networks (CNNs), including MobileNet, MobileNetV2, ResNet101VV2, ResNet101, ResNet50, ResNet50V2, ResNet152, DenseNet201, DenseNet169, DenseNet121, Xception, InceptionV3, and InceptionResNetV2. These models are evaluated to determine which performs best for classification tasks. A customized classification head is appended to prevent overfitting and improve accuracy. The CNN model, illustrated in Figure 3, consists of two main components: the first section has all layers frozen with no optimization, while the second part involves fine-tuning the last layer with a heading model. The layer arrangement may vary based on the specific problem and dataset but generally follows a logical flow: feature extraction layers, pooling layers to reduce dimensions and capture essential features, batch normalization for input normalization and speed, a dense layer with 256 neurons for learning complex relationships, a dropout layer (0.25) to prevent overfitting, and a final dense output layer with two neurons for predictions. Images are resized to 224 × 224 and 227 × 227 pixels to match the network's input dimensions.   
 ![Screenshot (254)](https://github.com/user-attachments/assets/6e829dfe-54bd-41b7-82bb-8c1996754560)  
@@ -60,7 +61,8 @@ Upon employing the image segmentation approach, different methods of extracting 
     <em> Figure3: The proposed DL system model</em>  
 </p>  
 
-2. **CNNs as Feature Extractor**:  
+2. **CNNs as Feature Extractor**:
+   
    - **File**: [CNNs as Feature Extractor](https://github.com/Zahramashayekhpour/organic-and-nonorganic-fruits-classification-based-on-traditional-machine-learning-and-deep-learning/blob/master/CNNs_as_Feature_Extractors.ipynb) 
    - **Description**: Using pre-trained CNNs for feature extraction is computationally intensive, while features are typically extracted from fully connected layers before the final classification layer without additional training. These models require less computing capacity. After evaluating various pre-trained networks, Densenet169, ResNet152, and MobileNetV2 were chosen. The feature vectors from each network were combined to create a final feature vector, which was then used as input for MLP, LDA, SVM, and RF classification algorithms.  
 
