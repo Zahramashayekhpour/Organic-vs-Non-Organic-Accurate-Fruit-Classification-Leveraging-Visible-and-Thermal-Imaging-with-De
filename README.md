@@ -1,4 +1,4 @@
-# README: Classification of Organic and Non-Organic Apples and Mushrooms Based on Visible and Thermal Imaging Using Traditional and Deep Methods   
+# README: Organic vs Non-Organic: Accurate Fruit Classification Leveraging Visible and Thermal Imaging with Deep and Traditional Methods
 
 ## Overview  
 This project aims to classify organic apples and mushrooms from non-organic counterparts using both traditional feature extraction methods and deep learning techniques. The methodologies presented in this project are based on the findings of our research article and have been implemented to facilitate reproducibility and further exploration.  
